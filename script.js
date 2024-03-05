@@ -1,63 +1,25 @@
-let a= new Date()
-let b =a.getMonth()
-let c= a.getDate()
-let d =a.getFullYear()
-// for time
-let e =a.getHours()
-let f= a.getMinutes()
-let s=a.getSeconds()
-console.log(c,b,d)
-console.log(e,f,s)
+// Loading
+// min.innerHTML = hours.innerHTML = day.innerHTML = month.innerHTML = year.innerHTML = "Fetching"
 
-day.innerHTML = c
-month.innerHTML =b
-year.innerHTML = d
-hours.innerHTML =e
+let date = new Date()
+sec.innerHTML = date.getSeconds()
+min.innerHTML = date.getMinutes()
+hours.innerHTML = date.getHours()
+day.innerHTML = date.getDate()
+month.innerHTML = date.getMonth()
+year.innerHTML = date.getFullYear()
 
-// this is for year
-setInterval(function(){
-  let a= new Date()
-  let d = a.getFullYear()
-  year.innerHTML = d
-
-},1)
-
-// this is for month
-setInterval(function(){
-  let a= new Date()
-  let b =a.getMonth()
-  month.innerHTML=b;
-  
-},1)
+setInterval(() => {
+  let date = new Date()
+  sec.innerHTML = date.getSeconds()
+  if (!isSame(min.innerHTML, date.getMinutes())) min.innerHTML = date.getMinutes()
+  if (!isSame(hours.innerHTML, date.getHours())) hours.innerHTML = date.getHours()
+  if (!isSame(day.innerHTML, date.getDate())) day.innerHTML = date.getDate()
+  if (!isSame(month.innerHTML, date.getMonth())) month.innerHTML = date.getMonth()
+  if (!isSame(year.innerHTML, date.getFullYear())) year.innerHTML = date.getFullYear()
+}, 1000);
 
 
-// this is for day
-setInterval(function(){
-  let a= new Date()
-  let c= a.getDate()
-  day.innerHTML = c
-},1)
-
-
-
-//this is for hours
-setInterval(function(){
-  let a= new Date()
-  let e= a.getHours()
-  min.innerHTML =e
-},1)
-
-// this is for min
-setInterval(function(){
-  let a= new Date()
-  let f= a.getMinutes()
-  min.innerHTML =f
-},1)
-
-// this is for second only
-setInterval(function(){
-  let a= new Date()
-  let s=a.getSeconds()
-  sec.innerHTML =s
-},1)
-
+function isSame(oldData, newData) {
+  return oldData === newData;
+}
