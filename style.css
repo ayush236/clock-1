@@ -1,53 +1,64 @@
 html {
-    height: 100%;
-    width: 100%;
-    background: black;
-    color: white;
-    
-  }
-  .container{
-    padding: 40px;
-    display: flex;
-    gap: 15px;
-    width:auto;
-    
-  }
-  .aline{
-    display: flex;
-    flex-direction: row;
-  }
-  .das{
-    font-size: 50px;
-  }
-  
-  .font{
-    font-size: 50px;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  #day{
-   padding-top: 1px;
-    font-size: 50PX;;
-  }
-  #month{
-   padding-top: 1px;
-    font-size: 50PX;;
-  }
-  #year{
-   padding-top: 1px;
-    font-size: 50PX;;
-  }
-   .container2{
-     display: flex;
-     align-items: center;
-     padding-left: 600px;
-   }
-  .frame{
-    display:flex;
-    width: 350px;
-    border-radius: 20px;
-    padding: 30px;
-    background: white;
-    color: black;
-    font-size: 100px;
-  }
-  
+  height: 100%;
+  width: 100%;
+  background: black;
+  color: white;
+  font-weight: bold;
+
+}
+
+.container {
+  padding: 40px;
+  display: flex;
+  gap: 15px;
+  width: auto;
+
+}
+
+.aline {
+  display: flex;
+  flex-direction: row;
+}
+
+.das {
+  font-size: 50px;
+}
+
+.font {
+  font-size: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#day {
+  padding-top: 1px;
+  font-size: 50PX;
+  ;
+}
+
+#month {
+  padding-top: 1px;
+  font-size: 50PX;
+  ;
+}
+
+#year {
+  padding-top: 1px;
+  font-size: 50PX;
+  ;
+}
+
+.container2 {
+  display: flex;
+  align-items: center;
+  padding-left: 40%;
+}
+
+.frame {
+  display: flex;
+  width: 350px;
+  border-radius: 20px;
+  padding: 30px;
+  background: white;
+  color: black;
+  font-size: 100px;
+}
