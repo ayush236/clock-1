@@ -4,10 +4,10 @@
 function updateDateTime() {
   let date = new Date()
   sec.innerHTML = doubleDigit(date.getSeconds())
-  if (!isSame(min.innerHTML, date.getMinutes())) min.innerHTML = date.getMinutes()
+  if (!isSame(min.innerHTML, doubleDigit(date.getMinutes()))) min.innerHTML = doubleDigit(date.getMinutes())
   if (!isSame(shortHours(hours.innerHTML), date.getHours())) hours.innerHTML = shortHours(date.getHours())
-  if (!isSame(day.innerHTML, date.getDate())) day.innerHTML = date.getDate()
-  if (!isSame(month.innerHTML, date.getMonth())) month.innerHTML = date.getMonth()
+  if (!isSame(day.innerHTML, doubleDigit(date.getDate()))) day.innerHTML = doubleDigit(date.getDate())
+  if (!isSame(month.innerHTML, doubleDigit(date.getMonth()))) month.innerHTML = doubleDigit(date.getMonth())
   if (!isSame(year.innerHTML, date.getFullYear())) year.innerHTML = date.getFullYear()
 }
 
